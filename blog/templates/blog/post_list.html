@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 	<head>
 		<title>Usb's Blog</title>
@@ -7,6 +6,14 @@
 		<div>
 			<h1><a href="/">Django Usb Blog</a></h1>
 		</div>
+
+		{% for post in posts %}
+			<div>
+				<p>published: {{ post.published_date }}</p>
+				<h1><a href = "">{{ post.title }}</a></h1>
+				<p>{{ post.text|linebreaksbr }}</p>
+			</div>
+		{% endfor %}
 
 		<div>
 			<p> published: 15.03.2017, 12:14</p>
